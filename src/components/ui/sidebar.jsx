@@ -738,7 +738,7 @@ const SidebarProvider = React.forwardRef(
         }
 
         // This sets the cookie to keep the sidebar state.
-        if (typeof document !== 'undefined') {
+        if (typeof document !== "undefined") {
           document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/; max-age=${SIDEBAR_COOKIE_MAX_AGE}`;
         }
       },
@@ -871,7 +871,7 @@ const Sidebar = React.forwardRef(
           className={cn(
             "duration-200 relative h-svh bg-transparent transition-[width] ease-linear",
             // Fixed: Changed width transition logic
-            state === "collapsed" 
+            state === "collapsed"
               ? variant === "floating" || variant === "inset"
                 ? "w-[calc(var(--sidebar-width-icon)_+_theme(spacing.4))]"
                 : "w-[--sidebar-width-icon]"
@@ -1349,4 +1349,5 @@ export {
   SidebarRail,
   SidebarSeparator,
   SidebarTrigger,
+  useSidebar,
 };
